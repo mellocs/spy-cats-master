@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "9e71c8bd-5b7d-47d6-b71a-880770e18128",
+		"name": "sca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28965179"
+	},
+	"item": [
+		{
+			"name": "cats",
+			"item": [
+				{
+					"name": "getAllCats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cats/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cats",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ted\",\n    \"years_of_experience\": 2,\n    \"breed\": \"Abyssinian\",\n    \"salary\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/cats/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cats",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/cats/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSalary",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salary\": 9999\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/cats/1/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cats",
+								"1",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/cats/1/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cats",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "missions",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/missions/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"missions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"targets\":\n    [\n        {\n            \"name\": \"test name\",\n            \"country\": \"test country\",\n            \"notes\": \"test notes\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/missions/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"missions",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/missions/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"missions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/missions/1/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"missions",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignCat",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/missions/2/assign-cat/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"missions",
+								"2",
+								"assign-cat",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "completeMission",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/missions/1/complete",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"missions",
+								"1",
+								"complete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "targets",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test name\",\n    \"country\": \"test country\",\n    \"notes\": \"test notes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/targets/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"targets",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTargetToMission",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/targets/1/add/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"targets",
+								"1",
+								"add",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTargetFromMission",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/targets/1/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"targets",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "completeTarget",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/targets/1/complete",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"targets",
+								"1",
+								"complete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateNotes",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"notes\": \"lorem ipsum\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/targets/7/update-notes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"targets",
+								"7",
+								"update-notes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
